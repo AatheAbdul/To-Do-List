@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header>
+            <h1>To-Do List</h1>
+        </header>
+        <main>
+            <form>
+                <input type="text" id="taskdetail" name="taskdetail" placeholder="Enter Task Details" required>
+                <input type="date" id="duedate" name="duedate">
+                <input type="checkbox" id="star" class="star-checkbox" />
+                <label for="star" class="star-label">&#9733;</label>
+                <input type="submit" class="add-task" value="Add Task" style="cursor: pointer;">
+            </form>
+            <div class="tasks"></div>
+        </main>
+        
+        <footer>
+            <p>@copyright AatheAbdul</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

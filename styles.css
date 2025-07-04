@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+}
+header,footer{
+    padding: 0.5rem;
+    background-color: #F09292;
+    color: #FFFFFF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 2rem;
+    justify-content: center; 
+    align-items: center;
+    height: 75vh;        
+}
+form{
+    background-color: #FFBFBF;
+    color: #FFFFFF;
+    border-radius: 0.5rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 0.2rem;
+}
+
+input[type="text"]{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: #686868;
+    width: 50%;
+}
+
+input[type="date"]{
+    border: none;
+    width: 20%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: #686868;
+}
+
+.add-task{
+    background-color: #F38A8A;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.star-checkbox {
+  display: none;
+}
+
+.star-label {
+  font-size: 2rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.star-checkbox:checked + .star-label {
+  color: gold;
+}
+
+.tasks{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around; 
+    align-items: center;
+    row-gap: 1rem;   
+    width: 50%; 
+}
+.task{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #AAA8A8;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1.1rem;
+}
+.task p{
+    font-weight: bold;
+}
+.task-icons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 0.5rem;
+    width: 40%;
+}
+.star-icon{
+    font-size: 1.5rem;
+    color: gold;
+}
+
+@media screen and (max-width: 768px) {
+  form, .tasks {
+    width: 90%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  .add-task {
+    width: 100%;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+
+  .task-icons {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .star-icon {
+    font-size: 1.3rem;
+  }
+
+  .date span {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .task {
+    padding: 0.5rem;
+  }
+}
