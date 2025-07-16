@@ -48,6 +48,7 @@ function addTask() {
 
 // Create a task card and insert into DOM
 function createTaskElement(task) {
+  if (!task.detail || typeof task.detail !== 'string') return;
   const taskHTML = `
     <div class="task">
       <div class="task-details" style="margin-left: 0.5rem">
